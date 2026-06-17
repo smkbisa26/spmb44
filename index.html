@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPMB - SMKS Sanjaya Bajawa</title>
+    <title>Sistem Pendaftaran Siswa Baru - SMKS Sanjaya Bajawa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -101,9 +101,10 @@
                     <span id="hero-badge" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-sky-400 to-rose-500 text-white px-6 py-2.5 rounded-2xl text-xs font-black tracking-widest mb-6 border-r-[3px] border-b-[6px] border-indigo-950 shadow-[0_10px_25px_rgba(99,102,241,0.45)] uppercase transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300">
                         <i id="lock-icon" class="fa-solid fa-lock-open text-sm"></i>
                         <span id="badge-text">SISTEM BUKA</span>
-                    </span>
-                    <h2 class="text-4xl md:text-6xl font-black text-white mb-2 tracking-tight drop-shadow-md">Penerimaan Murid Baru</h2>
-                    <h2 class="text-4xl md:text-6xl font-black text-amber-400 mb-6 tracking-tight drop-shadow-md">SMKS Sanjaya Bajawa.</h2>
+                   </span>
+                    <h5 class="text-4xl md:text-6xl font-black text-white mb-2 tracking-tight drop-shadow-md">Penerimaan Murid Baru</h5>
+                    <h5 class="text-2xl md:text-4xl font-black text-amber-400 mb-6 tracking-tight drop-shadow-md">TAHUN AJARAN 2026/2027</h5>
+
                     <p class="text-lg md:text-xl text-indigo-100 mb-10 max-w-2xl mx-auto font-medium drop-shadow">Mari bergabung bersama kami SMKS Sanjaya Bajawa, SMK yang memiliki komitmen membentuk Siswa-Siswi menjadi tenaga kerja vokasional yang unggul, berkarakter dan siap bersaing di DUDIKA (Dunia Usaha dan Dunia Industri Kerja).</p>
                     
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -234,7 +235,7 @@
                 <!-- Agenda & Jadwal -->
                 <div class="bg-white rounded-3xl p-8 shadow-xl border-t-8 border-coral-500 relative overflow-hidden">
                     <i class="fa-solid fa-calendar-days absolute -bottom-10 -right-10 text-9xl text-slate-50 opacity-50"></i>
-                    <h3 class="text-2xl font-black text-slate-800 mb-6 relative z-10"><i class="fa-solid fa-clock text-coral-500 mr-2"></i>Agenda dan Jadwal</h3>
+                    <h3 class="text-2xl font-black text-slate-800 mb-6 relative z-10"><i class="fa-solid fa-clock text-coral-500 mr-2"></i>Agenda & Jadwal</h3>
                     <div class="relative border-l-4 border-slate-100 ml-4 space-y-6 mt-4 z-10">
                         <div class="relative pl-6">
                             <div class="absolute -left-[14px] top-1 w-6 h-6 rounded-full bg-emerald-500 border-4 border-white shadow"></div>
@@ -654,7 +655,7 @@
         // JEMBATAN WEB APP URL (GOOGLE APPS SCRIPT)
         // SILAKAN GANTI URL DI BAWAH DENGAN URL DEPLOY AKHIR WEB APP ANDA NANTI!
         // =========================================================================
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbx_AVfFGLMmhNUgfKvobQ_172DBRZUMjRX1ZvVJ9vcpcB9PyhrTa6j57ce9mBgurtDOfw/exec"; 
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbw0_pBa3qgSdGe7Ynqgmuu_Bb23y4VDW-oBYvJw-vfKsOqSjaFjkNYhNDKfH-UF76f_8A/exec"; 
 
         // State & Data
         let appData = [];
@@ -706,25 +707,58 @@
 
         // Inisialisasi awal saat window dimuat
         window.onload = function() {
-            initMap();
-            fetchData();
-            restoreLocalBackups(); // Cek jika ada sisa data pendaftar yang belum terkirim di lokal
-        };
+    initMap();
+    hydrateFromCache();    // ⚡ PEMUATAN INSTAN: Membaca cache lokal terlebih dahulu
+    fetchData();           // 🔄 SINKRONISASI JARINGAN: Memperbarui data murni di latar belakang
+    restoreLocalBackups(); // Cek jika ada sisa data pendaftar lokal yang belum dikirim
+};
+      // Memuat status pendaftaran dan config langsung dari memori lokal (0 milidetik!)
+function hydrateFromCache() {
+    try {
+        let cachedData = localStorage.getItem('spmb_cache_appdata');
+        let cachedConfig = localStorage.getItem('spmb_cache_config');
+
+        if (cachedData) {
+            appData = JSON.parse(cachedData);
+            console.log("⚡ [PPDB Cache] Memulihkan data pendaftar lokal...");
+        }
+        if (cachedConfig) {
+            appConfig = JSON.parse(cachedConfig);
+            console.log("⚡ [PPDB Cache] Memulihkan konfigurasi sistem lokal...");
+        }
+    } catch (e) {
+        console.warn("Gagal membaca local cache untuk pendaftaran:", e);
+    }
+
+    // Instan update UI
+    applyConfig();
+    renderFormOptions();
+    updatePublicStats3D();
+}
 
         // Fungsi pembantu untuk memperbarui statistik 3D publik secara langsung
         function updatePublicStats3D() {
-            let total = appData.length;
-            let l = appData.filter(d => d.jk === "L").length;
-            let p = appData.filter(d => d.jk === "P").length;
+    let total = appData.length;
+    let l = appData.filter(d => d.jk === "L").length;
+    let p = appData.filter(d => d.jk === "P").length;
 
-            const total3d = document.getElementById('stat-total-3d');
-            const l3d = document.getElementById('stat-l-3d');
-            const p3d = document.getElementById('stat-p-3d');
+    const total3d = document.getElementById('stat-total-3d');
+    const l3d = document.getElementById('stat-l-3d');
+    const p3d = document.getElementById('stat-p-3d');
 
-            if (total3d) total3d.innerText = total;
-            if (l3d) l3d.innerText = l;
-            if (p3d) p3d.innerText = p;
-        }
+    if (total3d) total3d.innerText = total;
+    if (l3d) l3d.innerText = l;
+    if (p3d) p3d.innerText = p;
+
+    // === TAMBAHKAN BLOK INI ===
+    // Simpan perubahan ke local storage agar refresh berikutnya langsung instan!
+    try {
+        localStorage.setItem('spmb_cache_appdata', JSON.stringify(appData));
+    } catch (e) {
+        console.warn("Gagal mencadangkan data pendaftar ke local storage:", e);
+    }
+    // ==========================
+}
 
         // Fetch Data & Config via GAS (GET) - Mengaktifkan Fitur Sinkron 2-Arah
         async function fetchData() {
@@ -736,6 +770,7 @@
                 appData = json.pendaftar || [];
                 if(json.config) {
                     appConfig = json.config;
+                  localStorage.setItem('spmb_cache_config', JSON.stringify(appConfig));
                     // SINKRONISASI & AMANKAN fall-back nama sekolah jika bernilai undefined
                     if(!appConfig.sekolah || appConfig.sekolah === "undefined" || appConfig.sekolah.trim() === "") {
                         appConfig.sekolah = "SMKS SANJAYA BAJAWA";
@@ -918,7 +953,7 @@
             let role = document.getElementById('login-role').value;
             let pass = document.getElementById('login-pass').value;
 
-            if (pass === 'sanjaya2030#') {
+            if (pass === 'sarjanasoft') {
                 currentUserRole = role;
                 currentUsername = role === 'admin' ? 'Administrator' : 'Panitia PMB';
                 
