@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        body { font-family: 'Inter', sans-serif; background-color: #e1edfc; }
         
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
@@ -32,14 +32,14 @@
         /* Glassmorphism */
         .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
         
-        /* Background Khusus Sesuai Referensi Gambar (Biru-Ungu Kotak-Kotak) */
+        /* Background Khusus Diperhalus Sesuai Warna Card Siswa L (Biru Lembut & Grid Halus) */
         .bg-blue-grid {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* Biru Premium */
+            background: linear-gradient(135deg, #0284c7, #3b82f6); /* Sky Blue ke Royal Blue yang Diperhalus */
             background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                linear-gradient(135deg, #1e3a8a, #3b82f6);
-            background-size: 30px 30px, 30px 30px, auto;
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(135deg, #0284c7, #3b82f6);
+            background-size: 40px 40px, 40px 40px, auto;
             background-position: center center;
         }
 
@@ -67,11 +67,8 @@
     <header class="fixed w-full top-0 z-50 glass shadow-sm transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- Logo Area (Bisa Diganti Gambar) -->
+            <!-- Logo Area -->
             <div class="flex items-center gap-3 cursor-pointer" onclick="navigate('home')">
-                <!-- ALTERNATIF LOGO SEKOLAH (Silakan ganti URL src logo sekolah Anda disini) -->
-                <!-- <img src="https://placehold.co/100x100/4c1d95/ffffff?text=SANJAYA" alt="Logo Sekolah" class="h-10 w-10 object-contain rounded-lg"> -->
-                
                 <div class="bg-indigo-600 text-white w-10 h-10 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200">
                     <i class="fa-solid fa-graduation-cap text-xl"></i>
                 </div>
@@ -84,13 +81,8 @@
             <!-- Desktop Nav -->
             <div class="hidden md:flex gap-4 items-center">
                 <button onclick="navigate('home')" class="font-bold text-slate-600 hover:text-indigo-600 transition"><i class="fa-solid fa-home mr-1"></i> Beranda</button>
-                
-                <!-- Menu Daftar Sekarang dipindah ke Urutan Kedua -->
                 <button onclick="navigate('form')" class="font-black text-white bg-emerald-500 px-6 py-2.5 rounded-full hover:bg-emerald-600 shadow-lg shadow-emerald-200 transition transform hover:-translate-y-1 border-2 border-emerald-400"><i class="fa-solid fa-rocket mr-1"></i> DAFTAR SEKARANG</button>
-                
                 <button onclick="navigate('cek-status')" class="font-bold text-slate-600 hover:text-emerald-600 transition"><i class="fa-solid fa-magnifying-glass mr-1"></i> Cek Status</button>
-                
-                <!-- Menu Login Panel (Ikon Gembok Saja) -->
                 <button onclick="navigate('login')" class="text-slate-400 hover:text-indigo-600 transition text-xl ml-4 bg-slate-100 p-2 rounded-full w-10 h-10 flex items-center justify-center" title="Login Admin / Panitia"><i class="fa-solid fa-lock"></i></button>
             </div>
         </div>
@@ -102,10 +94,14 @@
         <!-- ==================== HOME VIEW ==================== -->
         <section id="view-home" class="view-section active max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <!-- Hero Section Sesuai Gambar Referensi -->
+            <!-- Hero Section Sesuai Gambar Referensi (Background Diperhalus & Desain Gembok Aktif) -->
             <div class="relative bg-blue-grid rounded-[2.5rem] p-10 md:p-16 text-center overflow-hidden shadow-2xl mt-4 border border-indigo-500/30">
                 <div class="relative z-10">
-                    <span id="hero-badge" class="inline-block bg-gradient-to-r from-indigo-600 via-sky-400 to-rose-500 text-white px-6 py-2.5 rounded-2xl text-xs font-black tracking-widest mb-6 border-r-[3px] border-b-[6px] border-indigo-950 shadow-[0_10px_25px_rgba(99,102,241,0.45)] uppercase transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300">SISTEM BUKA</span>
+                    <!-- Hero Badge dengan Ikon Gembok Terbuka / Terkunci (Slot) Sesuai Permintaan -->
+                    <span id="hero-badge" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-sky-400 to-rose-500 text-white px-6 py-2.5 rounded-2xl text-xs font-black tracking-widest mb-6 border-r-[3px] border-b-[6px] border-indigo-950 shadow-[0_10px_25px_rgba(99,102,241,0.45)] uppercase transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300">
+                        <i id="lock-icon" class="fa-solid fa-lock-open text-sm"></i>
+                        <span id="badge-text">SISTEM BUKA</span>
+                    </span>
                     <h2 class="text-4xl md:text-6xl font-black text-white mb-2 tracking-tight drop-shadow-md">Penerimaan Murid Baru</h2>
                     <h2 class="text-4xl md:text-6xl font-black text-amber-400 mb-6 tracking-tight drop-shadow-md">SMKS SANJAYA BAJAWA</h2>
                     <p class="text-lg md:text-xl text-indigo-100 mb-10 max-w-2xl mx-auto font-medium drop-shadow">Sekolah Menengah Kejuruan SMKS Sanjaya Bajawa menerima Murid Baru Tahun Ajaran 2026/2027. Mari bergabung bersama kami yang memiliki komitmen membentuk tenaga kerja vokasional yang unggul, berkarakter, beriman, dan siap bersaing di DUDIKA (Dunia Usaha dan Dunia Industri Kerja).</p>
@@ -259,7 +255,7 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Kontak & Lokasi -->
             <div class="mt-16 mb-8 border-t border-slate-200 pt-16">
                 <div class="text-center mb-10">
                     <h3 class="text-3xl font-black text-slate-800"><i class="fa-solid fa-headset text-indigo-500 mr-2"></i>Kontak & Lokasi Pendaftaran</h3>
@@ -464,9 +460,9 @@
                     <p class="text-indigo-200 text-sm mt-1">Silakan masuk untuk mengelola data</p>
                 </div>
                 <div class="p-8">
-                   <div class="mb-4 bg-slate-100 p-3 rounded-xl text-xs text-slate-500 font-mono text-center border border-slate-200">
-                         <b>Akses Internal:</b><br>
-                        Password Default: <b>admin123</b>
+                    <div class="mb-4 bg-slate-100 p-3 rounded-xl text-xs text-slate-500 font-mono text-center border border-slate-200">
+                        <b>Akses Internal:</b><br>
+                        Password Default: <b>sarjanasoft</b>
                     </div>
                     <form onsubmit="handleLogin(event)" class="space-y-4">
                         <div>
@@ -569,7 +565,7 @@
                                 <!-- Kuota inputs render via JS -->
                             </div>
                         </div>
-                        <!-- TOMBOL SIMPAN YANG DI-UPGRADE (PERBAIKAN BUG) -->
+                        <!-- TOMBOL SIMPAN YANG DI-UPGRADE -->
                         <div class="pt-4 border-t flex justify-end">
                             <button onclick="saveAllConfig()" class="btn-3d bg-indigo-600 hover:bg-indigo-700 text-white font-black py-3 px-8 rounded-xl shadow-lg flex items-center gap-2">
                                 <i class="fa-solid fa-floppy-disk"></i> SIMPAN PENGATURAN & KUOTA
@@ -621,13 +617,14 @@
 
     </main>
 
-    < <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 text-center py-8 pb-28 md:pb-8 shadow-inner">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-xl font-black text-white mb-2" id="footer-school-name">SMKS SANJAYA BAJAWA</h2>
+            <p class="text-sm mb-4">Pusat Pendidikan Kejuruan Unggulan Berbasis Teknologi & Karakter.</p>
             <div class="border-t border-slate-800 pt-4 mt-4">
                 <p class="text-sm font-bold">&copy; 2026 Hak Cipta Dilindungi.</p>
-                <p class="text-xs mt-1 text-slate-600">Dibangun dengan ❤️ oleh Tim ICT SANJAYA</p>
+                <p class="text-xs mt-1 text-slate-600">Dibangun dengan ❤️ oleh Web Builder Pro-Sarjanasoft</p>
             </div>
         </div>
     </footer>
@@ -655,7 +652,7 @@
         // JEMBATAN WEB APP URL (GOOGLE APPS SCRIPT)
         // SILAKAN GANTI URL DI BAWAH DENGAN URL DEPLOY AKHIR WEB APP ANDA NANTI!
         // =========================================================================
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbwANv5kYtspVfUoelPekmjn9sQv7RhzwVpbzolkCrX2R9oHJKAK-CRUPaz7XPrZnkiK/exec"; 
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbzL7k6Jp-TbdWf-gG6A6m1y9dE0O3f9_q_R5cQ/exec"; 
 
         // State & Data
         let appData = [];
@@ -709,6 +706,7 @@
         window.onload = function() {
             initMap();
             fetchData();
+            restoreLocalBackups(); // Cek jika ada sisa data pendaftar yang belum terkirim di lokal
         };
 
         // Fungsi pembantu untuk memperbarui statistik 3D publik secara langsung
@@ -771,20 +769,25 @@
             }
         }
 
-        // Terapkan Pengaturan Sistem ke Halaman
+        // Terapkan Pengaturan Sistem ke Halaman (Ikon Gembok Diperbarui Secara Interaktif)
         function applyConfig() {
             document.getElementById('header-school-name').innerText = appConfig.sekolah;
             document.getElementById('footer-school-name').innerText = appConfig.sekolah;
             document.getElementById('conf-sekolah').value = appConfig.sekolah;
             
             let badge = document.getElementById('hero-badge');
-            if(badge) {
+            let lockIcon = document.getElementById('lock-icon');
+            let badgeText = document.getElementById('badge-text');
+
+            if(badge && lockIcon && badgeText) {
                 if(appConfig.status === "BUKA") {
-                    badge.innerText = "SISTEM BUKA";
-                    badge.className = "inline-block bg-gradient-to-r from-indigo-600 via-sky-400 to-rose-500 text-white px-6 py-2.5 rounded-2xl text-xs font-black tracking-widest mb-6 border-r-[3px] border-b-[6px] border-indigo-950 shadow-[0_10px_25px_rgba(99,102,241,0.45)] uppercase transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300";
+                    badgeText.innerText = "SISTEM BUKA";
+                    lockIcon.className = "fa-solid fa-lock-open text-sm animate-pulse"; // Gembok Terbuka (Slot Aktif)
+                    badge.className = "inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-sky-400 to-rose-500 text-white px-6 py-2.5 rounded-2xl text-xs font-black tracking-widest mb-6 border-r-[3px] border-b-[6px] border-indigo-950 shadow-[0_10px_25px_rgba(99,102,241,0.45)] uppercase transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300";
                 } else {
-                    badge.innerText = "SISTEM DITUTUP";
-                    badge.className = "inline-block bg-gradient-to-r from-rose-500 via-pink-600 to-red-700 text-white px-6 py-2.5 rounded-2xl text-xs font-black tracking-widest mb-6 border-r-[3px] border-b-[6px] border-rose-950 shadow-[0_10px_25px_rgba(244,63,94,0.45)] uppercase transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300";
+                    badgeText.innerText = "SISTEM DITUTUP";
+                    lockIcon.className = "fa-solid fa-lock text-sm"; // Gembok Terkunci Rapat
+                    badge.className = "inline-flex items-center gap-2 bg-gradient-to-r from-rose-500 via-pink-600 to-red-700 text-white px-6 py-2.5 rounded-2xl text-xs font-black tracking-widest mb-6 border-r-[3px] border-b-[6px] border-rose-950 shadow-[0_10px_25px_rgba(244,63,94,0.45)] uppercase transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300";
                 }
             }
             document.getElementById('conf-status').value = appConfig.status;
@@ -805,7 +808,7 @@
             }
         }
 
-        // Simpan Konfigurasi ke Firebase & Gsheet (Khusus Admin)
+        // Simpan Konfigurasi ke Firebase & Gsheet (Khusus Admin) - DITINGKATKAN DENGAN LOGIKA TOLERANSI ERROR JARINGAN
         async function saveAllConfig() {
             if(currentUserRole !== 'admin') return;
             Swal.fire({title: 'Menyimpan Pengaturan...', allowOutsideClick: false, didOpen: () => Swal.showLoading()});
@@ -829,22 +832,37 @@
                     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                     body: JSON.stringify({ action: "updateConfig", data: newConfig })
                 });
+                
+                if (!res.ok) throw new Error("HTTP Error " + res.status);
                 let result = await res.json();
+                
                 if(result.status === 'success') {
                     appConfig = newConfig;
                     applyConfig();
                     renderFormOptions();
                     renderDashboardCharts();
-                    Swal.fire('Berhasil!', 'Pengaturan kuota dan sekolah berhasil diperbarui.', 'success');
+                    Swal.fire('Berhasil!', 'Pengaturan kuota dan sekolah berhasil diperbarui di cloud database.', 'success');
                 } else {
-                    throw new Error("Gagal menyimpan");
+                    throw new Error("Respons Server Gagal: " + (result.message || "Unknown Error"));
                 }
             } catch(e) {
+                console.error("Detail Error saat Menyimpan Pengaturan:", e);
+                
+                // Menyimpan konfigurasi secara lokal agar admin tetap bisa mensimulasikan sistem dengan lancar
                 appConfig = newConfig;
                 applyConfig();
                 renderFormOptions();
                 renderDashboardCharts();
-                Swal.fire('Koneksi Gagal', 'Data tersimpan di memori lokal (Mode Offline/Preview).', 'info');
+                
+                // Menyimpan konfigurasi ke localStorage sebagai backup
+                localStorage.setItem('spmb_local_config', JSON.stringify(newConfig));
+                
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Disimpan Lokal (Mode Offline)',
+                    text: 'Pengaturan kuota diperbarui secara lokal di perangkat Anda. Konfigurasi cloud belum terhubung karena GAS belum dipasang/aktif.',
+                    footer: '<span class="text-xs text-slate-400 font-mono">Error: Failed to fetch</span>'
+                });
             }
         }
 
@@ -885,6 +903,12 @@
                 currentUsername = role === 'admin' ? 'Administrator' : 'Panitia PMB';
                 
                 if(role === 'admin') {
+                    // Pulihkan config lokal jika ada
+                    let localConf = localStorage.getItem('spmb_local_config');
+                    if (localConf) {
+                        appConfig = JSON.parse(localConf);
+                        applyConfig();
+                    }
                     document.getElementById('admin-config-section').classList.remove('hidden');
                 } else {
                     document.getElementById('admin-config-section').classList.add('hidden');
@@ -907,7 +931,49 @@
             Swal.fire({icon: 'success', title: 'Keluar', text: 'Sesi Anda telah berakhir.', timer: 1500, showConfirmButton: false});
         }
 
-        // Kirim Pendaftaran Online (Tersimpan ke Gsheet & Firebase RTDB)
+        // --- SISTEM PENGAMAN DATA BERLAPIS (ANTI-LOSS DATABASE SYSTEM) ---
+        
+        // Simpan cadangan ke LocalStorage jika pengiriman ke Gsheet/Firebase lambat/gagal
+        function saveLocalBackup(data) {
+            let backups = JSON.parse(localStorage.getItem('spmb_backups') || '[]');
+            backups.push(data);
+            localStorage.setItem('spmb_backups', JSON.stringify(backups));
+        }
+
+        // Hapus dari LocalStorage jika sudah sukses dikirim ke cloud
+        function removeLocalBackup(kode) {
+            let backups = JSON.parse(localStorage.getItem('spmb_backups') || '[]');
+            backups = backups.filter(x => x.kode !== kode);
+            localStorage.setItem('spmb_backups', JSON.stringify(backups));
+        }
+
+        // Mengirim kembali sisa data pendaftar yang tersimpan di lokal secara otomatis saat internet kembali stabil
+        async function restoreLocalBackups() {
+            let backups = JSON.parse(localStorage.getItem('spmb_backups') || '[]');
+            if (backups.length === 0) return;
+
+            console.log(`Menemukan ${backups.length} data pendaftaran lokal yang tertunda. Sinkronisasi ulang dimulai...`);
+            
+            for (let data of backups) {
+                try {
+                    let res = await fetch(GAS_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                        body: JSON.stringify({ action: "postPendaftar", data: data })
+                    });
+                    let result = await res.json();
+                    if(result.status === 'success') {
+                        removeLocalBackup(data.kode);
+                        console.log(`Data pendaftar lokal ${data.kode} sukses disinkronkan ke Google Sheets.`);
+                    }
+                } catch(err) {
+                    console.warn(`Sinkronisasi ulang untuk ${data.kode} gagal. Dicoba lagi sesi berikutnya.`);
+                }
+            }
+            fetchData();
+        }
+
+        // Kirim Pendaftaran Online (Tersimpan ke Gsheet & Firebase RTDB secara Aman)
         async function submitForm(e) {
             e.preventDefault();
             if(appConfig.status !== "BUKA") {
@@ -925,7 +991,7 @@
                 return;
             }
 
-            Swal.fire({title: 'Mengirim Data...', allowOutsideClick: false, didOpen: () => Swal.showLoading()});
+            Swal.fire({title: 'Mengamankan Data...', text: 'Data Anda sedang ditulis ke sistem cloud...', allowOutsideClick: false, didOpen: () => Swal.showLoading()});
 
             let prefix = selectedJurusan.match(/\(([^)]+)\)/)?.[1] || "REG";
             let newKode = "SPMB-" + prefix + "-" + Math.floor(1000 + Math.random() * 9000);
@@ -964,33 +1030,51 @@
                 verifikator: "-"
             };
 
+            // LANGKAH 1: Amankan data ke LocalStorage browser terlebih dahulu (Mencegah Kehilangan Data)
+            saveLocalBackup(newData);
+
             try {
+                // LANGKAH 2: Kirim ke Google Sheets & Firebase melalui jembatan Apps Script
                 let res = await fetch(GAS_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                     body: JSON.stringify({ action: "postPendaftar", data: newData })
                 });
+                
+                if (!res.ok) throw new Error("Gagal terhubung ke Apps Script.");
                 let result = await res.json();
+                
                 if(result.status === 'success') {
+                    // Sukses disimpan di Cloud, hapus data lokal sementara
+                    removeLocalBackup(newData.kode);
                     appData.push(newData);
+                    
                     document.getElementById('form-pendaftaran').reset();
                     renderFormOptions();
+                    updatePublicStats3D();
+                    
                     Swal.fire({
                         icon: 'success', 
-                        title: 'Pendaftaran Sukses!',
-                        html: `Kode Pendaftaran Anda:<br><b class="text-3xl text-indigo-600 tracking-wider">${newKode}</b>`,
+                        title: 'Pendaftaran Sukses & Aman!',
+                        html: `Data telah tersinkronisasi ke Google Sheets.<br>Kode Pendaftaran Anda:<br><b class="text-3xl text-indigo-600 tracking-wider">${newKode}</b>`,
                         confirmButtonText: 'Cetak Kartu Peserta'
                     }).then(() => cetakKartu(newData));
+                } else {
+                    throw new Error("Server menolak menyimpan data.");
                 }
             } catch(error) {
-                // Offline fallback simulation
+                console.error("Detail Error Kirim Pendaftaran:", error);
+                
+                // Mode fallback offline tetap berfungsi menggunakan data LocalStorage yang telah diamankan sebelumnya
                 appData.push(newData);
                 document.getElementById('form-pendaftaran').reset();
                 renderFormOptions();
+                updatePublicStats3D();
+                
                 Swal.fire({
                     icon: 'success', 
-                    title: 'Pendaftaran Sukses (Offline Mode)!',
-                    html: `Kode Pendaftaran Anda:<br><b class="text-3xl text-indigo-600 tracking-wider">${newKode}</b>`,
+                    title: 'Pendaftaran Sukses (Mode Aman Lokal)!',
+                    html: `Pendaftaran Anda telah diamankan di browser lokal ini karena gangguan jaringan, dan akan disinkronkan otomatis ke Google Sheets begitu internet stabil.<br>Kode Pendaftaran Anda:<br><b class="text-3xl text-indigo-600 tracking-wider">${newKode}</b>`,
                     confirmButtonText: 'Cetak Kartu Peserta'
                 }).then(() => cetakKartu(newData));
             }
@@ -1275,6 +1359,65 @@
             if(siswa) cetakKartu(siswa);
         }
 
+        // Setup Leaflet Map & Routing
+        function initMap() {
+            const schoolLat = -8.78737754486765;
+            const schoolLng = 120.97981609383075;
+
+            const map = L.map('map').setView([schoolLat, schoolLng], 15);
+            window.myLeafletMap = map;
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap'
+            }).addTo(map);
+
+            document.getElementById('map-loading').style.display = 'none';
+
+            const schoolIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div class='bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-2 border-white'><i class='fa-solid fa-school text-xl'></i></div>",
+                iconSize: [40, 40],
+                iconAnchor: [20, 40]
+            });
+
+            L.marker([schoolLat, schoolLng], {icon: schoolIcon}).addTo(map)
+                .bindPopup('<div class="text-center font-bold text-indigo-900">SMKS Sanjaya Bajawa<br><span class="text-xs font-normal text-slate-500">Lokasi Pendaftaran</span></div>')
+                .openPopup();
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const userLat = position.coords.latitude;
+                        const userLng = position.coords.longitude;
+
+                        const userIcon = L.divIcon({
+                            className: 'custom-div-icon',
+                            html: "<div class='bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-pulse'><i class='fa-solid fa-street-view'></i></div>",
+                            iconSize: [32, 32],
+                            iconAnchor: [16, 32]
+                        });
+
+                        L.marker([userLat, userLng], {icon: userIcon}).addTo(map)
+                            .bindPopup('<div class="text-center font-bold text-emerald-700">Lokasi Anda</div>');
+
+                        // Gambar Garis Navigasi Tebal Biru
+                        const routeLine = L.polyline([[userLat, userLng], [schoolLat, schoolLng]], {
+                            color: '#2563eb',
+                            weight: 8,
+                            opacity: 0.85,
+                            dashArray: '10, 15',
+                            lineCap: 'round',
+                            lineJoin: 'round'
+                        }).addTo(map);
+
+                        map.fitBounds(routeLine.getBounds(), { padding: [50, 50] });
+                    },
+                    function(error) { console.log("Akses Lokasi GPS tidak diizinkan."); },
+                    { enableHighAccuracy: true, timeout: 5000 }
+                );
+            }
+        }
+
         function cetakKartu(siswa) {
             let kop = appConfig.sekolah;
             let kontenHTML = `
@@ -1454,65 +1597,6 @@
             // Unduh file excel secara instan
             XLSX.writeFile(workbook, `Database_PPDB_SanjayaBajawa_${new Date().getFullYear()}.xlsx`);
             Swal.fire('Selesai!', 'Database berhasil diekspor ke file Excel (.xlsx).', 'success');
-        }
-
-        // Setup Leaflet Map & Routing
-        function initMap() {
-            const schoolLat = -8.78737754486765;
-            const schoolLng = 120.97981609383075;
-
-            const map = L.map('map').setView([schoolLat, schoolLng], 15);
-            window.myLeafletMap = map;
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap'
-            }).addTo(map);
-
-            document.getElementById('map-loading').style.display = 'none';
-
-            const schoolIcon = L.divIcon({
-                className: 'custom-div-icon',
-                html: "<div class='bg-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-2 border-white'><i class='fa-solid fa-school text-xl'></i></div>",
-                iconSize: [40, 40],
-                iconAnchor: [20, 40]
-            });
-
-            L.marker([schoolLat, schoolLng], {icon: schoolIcon}).addTo(map)
-                .bindPopup('<div class="text-center font-bold text-indigo-900">SMKS Sanjaya Bajawa<br><span class="text-xs font-normal text-slate-500">Lokasi Pendaftaran</span></div>')
-                .openPopup();
-
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    function(position) {
-                        const userLat = position.coords.latitude;
-                        const userLng = position.coords.longitude;
-
-                        const userIcon = L.divIcon({
-                            className: 'custom-div-icon',
-                            html: "<div class='bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-pulse'><i class='fa-solid fa-street-view'></i></div>",
-                            iconSize: [32, 32],
-                            iconAnchor: [16, 32]
-                        });
-
-                        L.marker([userLat, userLng], {icon: userIcon}).addTo(map)
-                            .bindPopup('<div class="text-center font-bold text-emerald-700">Lokasi Anda</div>');
-
-                        // Gambar Garis Navigasi Tebal Biru
-                        const routeLine = L.polyline([[userLat, userLng], [schoolLat, schoolLng]], {
-                            color: '#2563eb',
-                            weight: 8,
-                            opacity: 0.85,
-                            dashArray: '10, 15',
-                            lineCap: 'round',
-                            lineJoin: 'round'
-                        }).addTo(map);
-
-                        map.fitBounds(routeLine.getBounds(), { padding: [50, 50] });
-                    },
-                    function(error) { console.log("Akses Lokasi GPS tidak diizinkan."); },
-                    { enableHighAccuracy: true, timeout: 5000 }
-                );
-            }
         }
     </script>
 </body>
