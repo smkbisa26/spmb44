@@ -74,7 +74,7 @@
                 </div>
                 <div>
                     <h1 class="font-black text-xl leading-none text-indigo-900 tracking-tight" id="header-school-name">SMKS SANJAYA</h1>
-                    <p class="text-[10px] font-bold text-slate-500 tracking-widest uppercase">SPMB ONLINE</p>
+                    <p class="text-[10px] font-bold text-slate-500 tracking-widest uppercase">SPMB Online</p>
                 </div>
             </div>
 
@@ -100,13 +100,12 @@
                     <!-- Hero Badge dengan Ikon Gembok Terbuka / Terkunci (Slot) Sesuai Permintaan -->
                     <span id="hero-badge" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-sky-400 to-rose-500 text-white px-6 py-2.5 rounded-2xl text-xs font-black tracking-widest mb-6 border-r-[3px] border-b-[6px] border-indigo-950 shadow-[0_10px_25px_rgba(99,102,241,0.45)] uppercase transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300">
                         <i id="lock-icon" class="fa-solid fa-lock-open text-sm"></i>
-                        <span id="badge-text">SISTEM BUKA</span>
+                        <span id="badge-text">SISTEM DIBUKA</span>
                    </span>
                     <h5 class="text-4xl md:text-6xl font-black text-white mb-2 tracking-tight drop-shadow-md">Penerimaan Murid Baru</h5>
                     <h5 class="text-2xl md:text-4xl font-black text-amber-400 mb-6 tracking-tight drop-shadow-md">TAHUN AJARAN 2026/2027</h5>
 
                     <p class="text-lg md:text-xl text-indigo-100 mb-10 max-w-2xl mx-auto font-medium drop-shadow">Mari bergabung bersama kami SMKS Sanjaya Bajawa, SMK yang memiliki komitmen membentuk Siswa-Siswi menjadi tenaga kerja vokasional yang unggul, berkarakter dan siap bersaing di DUDIKA (Dunia Usaha dan Dunia Industri Kerja).</p>
-                    
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
                         <button onclick="navigate('form')" class="bg-emerald-500 hover:bg-emerald-600 text-white font-black py-4 px-10 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.4)] transition transform hover:-translate-y-1 hover:scale-105 border-2 border-emerald-400 text-lg">
                             DAFTAR SEKARANG <i class="fa-solid fa-rocket ml-2"></i>
@@ -180,7 +179,7 @@
             <div class="mt-16">
                 <div class="text-center mb-10">
                     <h3 class="text-3xl font-black text-slate-800">7 Kompetensi Keahlian</h3>
-                    <p class="text-slate-500 font-medium mt-2">Pilih jurusan sesuai bakat dan minatmu untuk masa depan yang cerah.</p>
+                    <p class="text-slate-500 font-medium mt-2">Pilih jurusan sesuai bakat dan minatmu.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Cards Jurusan -->
@@ -217,7 +216,7 @@
 
             <!-- Syarat Pendaftaran & Jadwal Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 mb-8">
-               <!-- Syarat Pendaftaran -->
+                <!-- Syarat Pendaftaran -->
                 <div class="bg-white rounded-3xl p-8 shadow-xl border-t-8 border-amber-500 relative overflow-hidden">
                     <i class="fa-solid fa-file-signature absolute -bottom-10 -right-10 text-9xl text-slate-50 opacity-50"></i>
                     <h3 class="text-2xl font-black text-slate-800 mb-6 relative z-10"><i class="fa-solid fa-list-check text-amber-500 mr-2"></i>Syarat Pendaftaran</h3>
@@ -283,7 +282,6 @@
                         <div><h4 class="font-bold text-slate-800">Maria Crensiana Fono, S.Pd</h4><p class="text-xs text-slate-500 font-medium">Panitia PPDB 4</p></div>
                     </a>
                 </div>
-
 
                 <!-- Leaflet Map Container -->
                 <div class="bg-white rounded-3xl p-2 shadow-xl border border-slate-100 relative overflow-hidden">
@@ -463,10 +461,12 @@
                     <p class="text-indigo-200 text-sm mt-1">Silakan masuk untuk mengelola data</p>
                 </div>
                 <div class="p-8">
-                    <div class="mb-4 bg-slate-100 p-3 rounded-xl text-xs text-slate-500 font-mono text-center border border-slate-200">
-                        <b>Akses Internal:</b><br>
-                        Password Default: <b>admin123</b>
-                    </div>
+                    <!-- Petunjuk Akses Baru & Terpisah -->
+                     <!-- <div class="mb-4 bg-slate-50 p-4 rounded-2xl text-xs text-slate-600 border border-slate-200 space-y-1">
+                        <p class="font-bold text-slate-700 text-center mb-1">🔑 PANDUAN AKSES SISTEM</p>
+                        <p>👤 <b>Administrator</b>: Password = <span class="font-mono bg-indigo-50 text-indigo-700 px-1 py-0.5 rounded font-bold">admin123</span></p>
+                        <p>👥 <b>Panitia / Verifikator</b>: Password = <span class="font-mono bg-emerald-50 text-emerald-700 px-1 py-0.5 rounded font-bold">panitia123</span></p>
+                    </div>-->
                     <form onsubmit="handleLogin(event)" class="space-y-4">
                         <div>
                             <label class="block text-sm font-bold text-slate-600 mb-1">Masuk Sebagai</label>
@@ -627,7 +627,7 @@
             
             <div class="border-t border-slate-800 pt-4 mt-4">
                 <p class="text-sm font-bold">&copy; 2026 Hak Cipta Dilindungi.</p>
-                <p class="text-xs mt-1 text-slate-600">Dibangun dengan ❤️ oleh TIM IT SANJAYA</p>
+                <p class="text-xs mt-1 text-slate-600">Dibangun dengan ❤️ oleh Web Builder Pro-Sarjanasoft</p>
             </div>
         </div>
     </footer>
@@ -655,7 +655,13 @@
         // JEMBATAN WEB APP URL (GOOGLE APPS SCRIPT)
         // SILAKAN GANTI URL DI BAWAH DENGAN URL DEPLOY AKHIR WEB APP ANDA NANTI!
         // =========================================================================
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbwEVsDFKoC4RxPjB7hSudFZ81QTSkGV_b0zRoDZ-5oexw9_9N9-2LeHlry6tQ6YG6Mlzw/exec"; 
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbzL7k6Jp-TbdWf-gG6A6m1y9dE0O3f9_q_R5cQ/exec"; 
+
+        // =========================================================================
+        // PASSWORD KREDENSIAL KEAMANAN BARU (TWEAK DI SINI)
+        // =========================================================================
+        const PASS_ADMIN = "sanjaya2030#";      // Password Administrator (Akses Penuh)
+        const PASS_PANITIA = "panitia123#";  // Password Panitia (Akses Verifikasi Data)
 
         // State & Data
         let appData = [];
@@ -707,58 +713,55 @@
 
         // Inisialisasi awal saat window dimuat
         window.onload = function() {
-    initMap();
-    hydrateFromCache();    // ⚡ PEMUATAN INSTAN: Membaca cache lokal terlebih dahulu
-    fetchData();           // 🔄 SINKRONISASI JARINGAN: Memperbarui data murni di latar belakang
-    restoreLocalBackups(); // Cek jika ada sisa data pendaftar lokal yang belum dikirim
-};
-      // Memuat status pendaftaran dan config langsung dari memori lokal (0 milidetik!)
-function hydrateFromCache() {
-    try {
-        let cachedData = localStorage.getItem('spmb_cache_appdata');
-        let cachedConfig = localStorage.getItem('spmb_cache_config');
-
-        if (cachedData) {
-            appData = JSON.parse(cachedData);
-            console.log("⚡ [PPDB Cache] Memulihkan data pendaftar lokal...");
-        }
-        if (cachedConfig) {
-            appConfig = JSON.parse(cachedConfig);
-            console.log("⚡ [PPDB Cache] Memulihkan konfigurasi sistem lokal...");
-        }
-    } catch (e) {
-        console.warn("Gagal membaca local cache untuk pendaftaran:", e);
-    }
-
-    // Instan update UI
-    applyConfig();
-    renderFormOptions();
-    updatePublicStats3D();
-}
+            initMap();
+            hydrateFromCache();    // ⚡ PEMUATAN INSTAN: Membaca cache lokal terlebih dahulu
+            fetchData();           // 🔄 SINKRONISASI JARINGAN: Memperbarui data murni di latar belakang
+            restoreLocalBackups(); // Cek jika ada sisa data pendaftar yang belum terkirim di lokal
+        };
 
         // Fungsi pembantu untuk memperbarui statistik 3D publik secara langsung
         function updatePublicStats3D() {
-    let total = appData.length;
-    let l = appData.filter(d => d.jk === "L").length;
-    let p = appData.filter(d => d.jk === "P").length;
+            let total = appData.length;
+            let l = appData.filter(d => d.jk === "L").length;
+            let p = appData.filter(d => d.jk === "P").length;
 
-    const total3d = document.getElementById('stat-total-3d');
-    const l3d = document.getElementById('stat-l-3d');
-    const p3d = document.getElementById('stat-p-3d');
+            const total3d = document.getElementById('stat-total-3d');
+            const l3d = document.getElementById('stat-l-3d');
+            const p3d = document.getElementById('stat-p-3d');
 
-    if (total3d) total3d.innerText = total;
-    if (l3d) l3d.innerText = l;
-    if (p3d) p3d.innerText = p;
+            if (total3d) total3d.innerText = total;
+            if (l3d) l3d.innerText = l;
+            if (p3d) p3d.innerText = p;
 
-    // === TAMBAHKAN BLOK INI ===
-    // Simpan perubahan ke local storage agar refresh berikutnya langsung instan!
-    try {
-        localStorage.setItem('spmb_cache_appdata', JSON.stringify(appData));
-    } catch (e) {
-        console.warn("Gagal mencadangkan data pendaftar ke local storage:", e);
-    }
-    // ==========================
-}
+            try {
+                localStorage.setItem('spmb_cache_appdata', JSON.stringify(appData));
+            } catch (e) {
+                console.warn("Gagal mencadangkan data ke cache lokal:", e);
+            }
+        }
+
+        // Memuat status pendaftaran dan config langsung dari memori lokal (0 milidetik!)
+        function hydrateFromCache() {
+            try {
+                let cachedData = localStorage.getItem('spmb_cache_appdata');
+                let cachedConfig = localStorage.getItem('spmb_cache_config');
+                
+                if (cachedData) {
+                    appData = JSON.parse(cachedData);
+                    console.log("⚡ [PPDB Cache] Memulihkan data pendaftar lokal...");
+                }
+                if (cachedConfig) {
+                    appConfig = JSON.parse(cachedConfig);
+                    console.log("⚡ [PPDB Cache] Memulihkan konfigurasi sistem lokal...");
+                }
+            } catch (e) {
+                console.warn("Gagal membaca local cache untuk pendaftaran:", e);
+            }
+            
+            applyConfig();
+            renderFormOptions();
+            updatePublicStats3D();
+        }
 
         // Fetch Data & Config via GAS (GET) - Mengaktifkan Fitur Sinkron 2-Arah
         async function fetchData() {
@@ -770,16 +773,18 @@ function hydrateFromCache() {
                 appData = json.pendaftar || [];
                 if(json.config) {
                     appConfig = json.config;
-                  localStorage.setItem('spmb_cache_config', JSON.stringify(appConfig));
                     // SINKRONISASI & AMANKAN fall-back nama sekolah jika bernilai undefined
                     if(!appConfig.sekolah || appConfig.sekolah === "undefined" || appConfig.sekolah.trim() === "") {
                         appConfig.sekolah = "SMKS SANJAYA BAJAWA";
                     }
+                    localStorage.setItem('spmb_cache_config', JSON.stringify(appConfig));
                 }
 
             } catch(e) {
                 console.warn("Koneksi gagal/GAS belum siap. Menggunakan data simulasi lokal.");
-                appData = [...MOCK_DATA]; 
+                if (appData.length === 0) {
+                    appData = [...MOCK_DATA]; 
+                }
             }
             
             applyConfig();
@@ -804,10 +809,15 @@ function hydrateFromCache() {
             if(viewId === 'dashboard') {
                 if(!currentUserRole) {
                     navigate('login');
-                    Swal.fire('Akses Ditolak', 'Silakan login dengan password "sarjanasoft" terlebih dahulu.', 'error');
+                    Swal.fire('Akses Ditolak', 'Silakan login terlebih dahulu.', 'error');
                 } else {
-                    renderTable();
-                    renderDashboardCharts();
+                    // Proteksi Keamanan Rendering Dashboard (Anti-Crash/Anti-Blank Screen)
+                    try {
+                        renderTable();
+                        renderDashboardCharts();
+                    } catch (err) {
+                        console.error("Gagal melakukan render dashboard data: ", err);
+                    }
                 }
             }
         }
@@ -893,6 +903,7 @@ function hydrateFromCache() {
                 
                 if(result.status === 'success') {
                     appConfig = newConfig;
+                    localStorage.setItem('spmb_cache_config', JSON.stringify(appConfig));
                     applyConfig();
                     renderFormOptions();
                     renderDashboardCharts();
@@ -910,6 +921,7 @@ function hydrateFromCache() {
                 renderDashboardCharts();
                 
                 // Menyimpan konfigurasi ke localStorage sebagai backup
+                localStorage.setItem('spmb_cache_config', JSON.stringify(newConfig));
                 localStorage.setItem('spmb_local_config', JSON.stringify(newConfig));
                 
                 Swal.fire({
@@ -947,37 +959,45 @@ function hydrateFromCache() {
             }
         }
 
-        // Logika Login Secure (sarjanasoft)
+        // Logika Login Secure (Membedakan Password Admin & Panitia secara Mutlak)
         function handleLogin(e) {
             e.preventDefault();
             let role = document.getElementById('login-role').value;
             let pass = document.getElementById('login-pass').value;
 
-            if (pass === 'sanjaya2026#') {
-                currentUserRole = role;
-                currentUsername = role === 'admin' ? 'Administrator' : 'Panitia PMB';
+            if (role === 'admin' && pass === PASS_ADMIN) {
+                currentUserRole = 'admin';
+                currentUsername = 'Administrator';
                 
-                if(role === 'admin') {
-                    // Pulihkan config lokal jika ada
-                    let localConf = localStorage.getItem('spmb_local_config');
-                    if (localConf) {
+                // Pulihkan config lokal khusus admin jika ada
+                let localConf = localStorage.getItem('spmb_local_config');
+                if (localConf) {
+                    try {
                         appConfig = JSON.parse(localConf);
                         applyConfig();
+                    } catch(err) {
+                        console.warn("Gagal memuat konfigurasi lokal.");
                     }
-                    document.getElementById('admin-config-section').classList.remove('hidden');
-                } else {
-                    document.getElementById('admin-config-section').classList.add('hidden');
                 }
-                
-                document.getElementById('login-pass').value = '';
-                document.getElementById('dash-username').innerText = currentUsername;
-                document.getElementById('dash-role-badge').innerText = currentUserRole.toUpperCase();
-                
-                navigate('dashboard');
-                Swal.fire({icon: 'success', title: 'Login Berhasil', toast: true, position: 'top-end', showConfirmButton: false, timer: 1500});
-            } else {
-                Swal.fire('Akses Ditolak', 'Password salah! Hubungi tim Sarjanasoft.', 'error');
+                document.getElementById('admin-config-section').classList.remove('hidden');
+            } 
+            else if (role === 'panitia' && pass === PASS_PANITIA) {
+                currentUserRole = 'panitia';
+                currentUsername = 'Panitia PMB';
+                document.getElementById('admin-config-section').classList.add('hidden'); // Sembunyikan setelan kuota untuk panitia
+            } 
+            else {
+                Swal.fire('Akses Ditolak', 'Password salah! Hubungi tim Admin PPDB.', 'error');
+                return;
             }
+
+            // Bersihkan input field untuk proteksi memori
+            document.getElementById('login-pass').value = '';
+            document.getElementById('dash-username').innerText = currentUsername;
+            document.getElementById('dash-role-badge').innerText = currentUserRole.toUpperCase();
+            
+            navigate('dashboard');
+            Swal.fire({icon: 'success', title: 'Login Berhasil', text: `Selamat datang, ${currentUsername}!`, toast: true, position: 'top-end', showConfirmButton: false, timer: 1500});
         }
 
         function logout() {
@@ -1135,115 +1155,125 @@ function hydrateFromCache() {
             }
         }
 
-        // Render Charts & Kuota di Dashboard
+        // Render Charts & Kuota di Dashboard (Diproteksi Penuh / Anti Layar Blank)
         function renderDashboardCharts() {
-            let labels = Object.keys(appConfig.kuota);
-            let maxValues = Object.values(appConfig.kuota);
-            let currentCounts = labels.map(l => appData.filter(d => d.jurusan === l).length);
+            try {
+                let labels = Object.keys(appConfig.kuota || {});
+                let maxValues = Object.values(appConfig.kuota || {});
+                let currentCounts = labels.map(l => appData.filter(d => d.jurusan === l).length);
 
-            // Render List Status Kuota
-            let statusContainer = document.getElementById('kuota-status-list');
-            if (statusContainer) {
-                statusContainer.innerHTML = '';
-                labels.forEach((l, idx) => {
-                    let isi = currentCounts[idx];
-                    let max = maxValues[idx];
-                    let sisa = max - isi;
-                    let percentage = Math.min(100, Math.round((isi / max) * 100));
-                    let colorClass = sisa <= 0 ? 'text-red-600 bg-red-50 border-red-200' : 'text-slate-700 bg-slate-50 border-slate-100';
-                    let progressBg = sisa <= 0 ? 'bg-red-500' : 'bg-indigo-600';
-                    let badge = sisa <= 0 ? '<span class="bg-red-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">FULL</span>' : `<span class="bg-indigo-100 text-indigo-700 text-[10px] font-black px-2 py-0.5 rounded-full">Sisa: ${sisa}</span>`;
-                    
-                    statusContainer.innerHTML += `
-                        <div class="p-3 rounded-2xl border ${colorClass} text-sm animate-fade">
-                            <div class="flex justify-between items-center mb-1">
-                                <span class="font-bold truncate max-w-[200px]" title="${l}">${l}</span>
-                                <div class="flex items-center gap-2">${badge} <span class="font-mono font-bold text-xs">${isi}/${max}</span></div>
+                // Render List Status Kuota
+                let statusContainer = document.getElementById('kuota-status-list');
+                if (statusContainer) {
+                    statusContainer.innerHTML = '';
+                    labels.forEach((l, idx) => {
+                        let isi = currentCounts[idx] || 0;
+                        let max = maxValues[idx] || 36;
+                        let sisa = max - isi;
+                        let percentage = Math.min(100, Math.round((isi / max) * 100));
+                        let colorClass = sisa <= 0 ? 'text-red-600 bg-red-50 border-red-200' : 'text-slate-700 bg-slate-50 border-slate-100';
+                        let progressBg = sisa <= 0 ? 'bg-red-500' : 'bg-indigo-600';
+                        let badge = sisa <= 0 ? '<span class="bg-red-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full">FULL</span>' : `<span class="bg-indigo-100 text-indigo-700 text-[10px] font-black px-2 py-0.5 rounded-full">Sisa: ${sisa}</span>`;
+                        
+                        statusContainer.innerHTML += `
+                            <div class="p-3 rounded-2xl border ${colorClass} text-sm animate-fade">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold truncate max-w-[200px]" title="${l}">${l}</span>
+                                    <div class="flex items-center gap-2">${badge} <span class="font-mono font-bold text-xs">${isi}/${max}</span></div>
+                                </div>
+                                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                                    <div class="${progressBg} h-full" style="width: ${percentage}%"></div>
+                                </div>
                             </div>
-                            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                                <div class="${progressBg} h-full" style="width: ${percentage}%"></div>
-                            </div>
-                        </div>
-                    `;
-                });
-            }
+                        `;
+                    });
+                }
 
-            // Render Chart JS
-            const ctx = document.getElementById('chart-pendaftar-jurusan');
-            if(ctx) {
-                if (dashboardChart) dashboardChart.destroy();
-                dashboardChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: labels.map(l => l.replace(/\(.*?\)/g, '')),
-                        datasets: [
-                            { label: 'Terisi', data: currentCounts, backgroundColor: '#4f46e5', borderRadius: 6 },
-                            { label: 'Total Kuota', data: maxValues, backgroundColor: '#e2e8f0', borderRadius: 6 }
-                        ]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        scales: { y: { beginAtZero: true } },
-                        plugins: { legend: { position: 'bottom' } }
+                // Render Chart JS
+                const ctx = document.getElementById('chart-pendaftar-jurusan');
+                if(ctx) {
+                    if (dashboardChart && typeof dashboardChart.destroy === 'function') {
+                        dashboardChart.destroy();
                     }
-                });
+                    dashboardChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: labels.map(l => l.replace(/\(.*?\)/g, '')),
+                            datasets: [
+                                { label: 'Terisi', data: currentCounts, backgroundColor: '#4f46e5', borderRadius: 6 },
+                                { label: 'Total Kuota', data: maxValues, backgroundColor: '#e2e8f0', borderRadius: 6 }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: { y: { beginAtZero: true } },
+                            plugins: { legend: { position: 'bottom' } }
+                        }
+                    });
+                }
+            } catch (err) {
+                console.error("Kesalahan render grafik dashboard: ", err);
             }
         }
 
-        // Render Tabel Data Pendaftar
+        // Render Tabel Data Pendaftar (Diproteksi Penuh)
         function renderTable() {
-            let tbody = document.getElementById('table-body');
-            if(!tbody) return;
-            tbody.innerHTML = '';
-            
-            let verifCount = 0; let waitCount = 0;
-            let maleCount = 0; let femaleCount = 0;
-
-            if(appData.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" class="p-8 text-center text-slate-400">Tidak ada data pendaftar.</td></tr>';
-                return;
-            }
-
-            // Pengurutan data terbaru (berdasarkan urutan input terakhir)
-            let reversedData = [...appData].reverse();
-
-            reversedData.forEach((d) => {
-                if(d.status === "Terverifikasi") verifCount++; else waitCount++;
-                if(d.jk === "L") maleCount++; else femaleCount++;
+            try {
+                let tbody = document.getElementById('table-body');
+                if(!tbody) return;
+                tbody.innerHTML = '';
                 
-                let badge = d.status === "Terverifikasi" ? `<span class="bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-check mr-1"></i> Terverifikasi</span>` : `<span class="bg-amber-100 text-amber-700 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-clock mr-1"></i> Menunggu</span>`;
-                
-                let actions = `
-                    <button onclick="verifikasi('${d.kode}')" class="text-emerald-500 hover:text-emerald-700 mx-1" title="Verifikasikan"><i class="fa-solid fa-circle-check text-lg"></i></button>
-                    <button onclick="cetakKartuDirect('${d.kode}')" class="text-indigo-500 hover:text-indigo-700 mx-1" title="Cetak Kartu"><i class="fa-solid fa-print text-lg"></i></button>
-                `;
-                
-                if (currentUserRole === 'admin') {
-                    actions += `
-                        <button onclick="editSiswa('${d.kode}')" class="text-blue-500 hover:text-blue-700 mx-1" title="Edit Data"><i class="fa-solid fa-pen-to-square text-lg"></i></button>
-                        <button onclick="hapus('${d.kode}')" class="text-red-500 hover:text-red-700 mx-1" title="Hapus"><i class="fa-solid fa-trash text-lg"></i></button>
-                    `;
+                let verifCount = 0; let waitCount = 0;
+                let maleCount = 0; let femaleCount = 0;
+
+                if(appData.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6" class="p-8 text-center text-slate-400">Tidak ada data pendaftar.</td></tr>';
+                    return;
                 }
 
-                tbody.innerHTML += `
-                    <tr class="hover:bg-slate-50 transition">
-                        <td class="px-4 py-3"><div class="font-bold text-indigo-600">${d.kode}</div><div class="text-[10px] text-slate-400">${d.tanggal_daftar}</div></td>
-                        <td class="px-4 py-3"><div class="font-bold text-slate-800">${d.nama}</div><div class="text-xs text-slate-500">NISN: ${d.nisn} | L/P: ${d.jk}</div></td>
-                        <td class="px-4 py-3 text-sm truncate max-w-[150px] font-medium" title="${d.jurusan}">${d.jurusan}</td>
-                        <td class="px-4 py-3 font-semibold text-xs">${d.hp}</td>
-                        <td class="px-4 py-3">${badge}</td>
-                        <td class="px-4 py-3 text-center">${actions}</td>
-                    </tr>
-                `;
-            });
+                // Pengurutan data terbaru (berdasarkan urutan input terakhir)
+                let reversedData = [...appData].reverse();
 
-            document.getElementById('stat-total').innerText = appData.length;
-            document.getElementById('stat-l').innerText = maleCount;
-            document.getElementById('stat-p').innerText = femaleCount;
-            document.getElementById('stat-verif').innerText = verifCount;
-            
-            updatePublicStats3D(); // Pastikan kartu 3D terupdate saat admin mengutak-atik tabel
+                reversedData.forEach((d) => {
+                    if(d.status === "Terverifikasi") verifCount++; else waitCount++;
+                    if(d.jk === "L") maleCount++; else femaleCount++;
+                    
+                    let badge = d.status === "Terverifikasi" ? `<span class="bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-check mr-1"></i> Terverifikasi</span>` : `<span class="bg-amber-100 text-amber-700 px-2.5 py-1 rounded-full text-xs font-bold"><i class="fa-solid fa-clock mr-1"></i> Menunggu</span>`;
+                    
+                    let actions = `
+                        <button onclick="verifikasi('${d.kode}')" class="text-emerald-500 hover:text-emerald-700 mx-1" title="Verifikasikan"><i class="fa-solid fa-circle-check text-lg"></i></button>
+                        <button onclick="cetakKartuDirect('${d.kode}')" class="text-indigo-500 hover:text-indigo-700 mx-1" title="Cetak Kartu"><i class="fa-solid fa-print text-lg"></i></button>
+                    `;
+                    
+                    if (currentUserRole === 'admin') {
+                        actions += `
+                            <button onclick="editSiswa('${d.kode}')" class="text-blue-500 hover:text-blue-700 mx-1" title="Edit Data"><i class="fa-solid fa-pen-to-square text-lg"></i></button>
+                            <button onclick="hapus('${d.kode}')" class="text-red-500 hover:text-red-700 mx-1" title="Hapus"><i class="fa-solid fa-trash text-lg"></i></button>
+                        `;
+                    }
+
+                    tbody.innerHTML += `
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="px-4 py-3"><div class="font-bold text-indigo-600">${d.kode}</div><div class="text-[10px] text-slate-400">${d.tanggal_daftar}</div></td>
+                            <td class="px-4 py-3"><div class="font-bold text-slate-800">${d.nama}</div><div class="text-xs text-slate-500">NISN: ${d.nisn} | L/P: ${d.jk}</div></td>
+                            <td class="px-4 py-3 text-sm truncate max-w-[150px] font-medium" title="${d.jurusan}">${d.jurusan}</td>
+                            <td class="px-4 py-3 font-semibold text-xs">${d.hp}</td>
+                            <td class="px-4 py-3">${badge}</td>
+                            <td class="px-4 py-3 text-center">${actions}</td>
+                        </tr>
+                    `;
+                });
+
+                document.getElementById('stat-total').innerText = appData.length;
+                document.getElementById('stat-l').innerText = maleCount;
+                document.getElementById('stat-p').innerText = femaleCount;
+                document.getElementById('stat-verif').innerText = verifCount;
+                
+                updatePublicStats3D(); // Pastikan kartu 3D terupdate saat admin mengutak-atik tabel
+            } catch (err) {
+                console.error("Kesalahan rendering tabel database: ", err);
+            }
         }
 
         // Verifikasi Status Siswa ke Database (GAS & Firebase & Gsheet)
@@ -1419,57 +1449,60 @@ function hydrateFromCache() {
             const schoolLat = -8.78737754486765;
             const schoolLng = 120.97981609383075;
 
-            const map = L.map('map').setView([schoolLat, schoolLng], 15);
-            window.myLeafletMap = map;
+            try {
+                const map = L.map('map').setView([schoolLat, schoolLng], 15);
+                window.myLeafletMap = map;
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap'
-            }).addTo(map);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap'
+                }).addTo(map);
 
-            document.getElementById('map-loading').style.display = 'none';
+                document.getElementById('map-loading').style.display = 'none';
 
-            const schoolIcon = L.divIcon({
-                className: 'custom-div-icon',
-                html: "<div class='bg-indigo-600 text-white w-10 h-10 rounded-xl flex items-center justify-center shadow-lg border-2 border-white'><i class='fa-solid fa-school text-xl'></i></div>",
-                iconSize: [40, 40],
-                iconAnchor: [20, 40]
-            });
+                const schoolIcon = L.divIcon({
+                    className: 'custom-div-icon',
+                    html: "<div class='bg-indigo-600 text-white w-10 h-10 rounded-xl flex items-center justify-center shadow-lg border-2 border-white'><i class='fa-solid fa-school text-xl'></i></div>",
+                    iconSize: [40, 40],
+                    iconAnchor: [20, 40]
+                });
 
-            L.marker([schoolLat, schoolLng], {icon: schoolIcon}).addTo(map)
-                .bindPopup('<div class="text-center font-bold text-indigo-900">SMKS Sanjaya Bajawa<br><span class="text-xs font-normal text-slate-500">Lokasi Pendaftaran</span></div>')
-                .openPopup();
+                L.marker([schoolLat, schoolLng], {icon: schoolIcon}).addTo(map)
+                    .bindPopup('<div class="text-center font-bold text-indigo-900">SMKS Sanjaya Bajawa<br><span class="text-xs font-normal text-slate-500">Lokasi Pendaftaran</span></div>')
+                    .openPopup();
 
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    function(position) {
-                        const userLat = position.coords.latitude;
-                        const userLng = position.coords.longitude;
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        function(position) {
+                            const userLat = position.coords.latitude;
+                            const userLng = position.coords.longitude;
 
-                        const userIcon = L.divIcon({
-                            className: 'custom-div-icon',
-                            html: "<div class='bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-pulse'><i class='fa-solid fa-street-view'></i></div>",
-                            iconSize: [32, 32],
-                            iconAnchor: [16, 32]
-                        });
+                            const userIcon = L.divIcon({
+                                className: 'custom-div-icon',
+                                html: "<div class='bg-emerald-500 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-pulse'><i class='fa-solid fa-street-view'></i></div>",
+                                iconSize: [32, 32],
+                                iconAnchor: [16, 32]
+                            });
 
-                        L.marker([userLat, userLng], {icon: userIcon}).addTo(map)
-                            .bindPopup('<div class="text-center font-bold text-emerald-700">Lokasi Anda</div>');
+                            L.marker([userLat, userLng], {icon: userIcon}).addTo(map)
+                                .bindPopup('<div class="text-center font-bold text-emerald-700">Lokasi Anda</div>');
 
-                        // Gambar Garis Navigasi Tebal Biru
-                        const routeLine = L.polyline([[userLat, userLng], [schoolLat, schoolLng]], {
-                            color: '#2563eb',
-                            weight: 8,
-                            opacity: 0.85,
-                            dashArray: '10, 15',
-                            lineCap: 'round',
-                            lineJoin: 'round'
-                        }).addTo(map);
+                            const routeLine = L.polyline([[userLat, userLng], [schoolLat, schoolLng]], {
+                                color: '#2563eb',
+                                weight: 8,
+                                opacity: 0.85,
+                                dashArray: '10, 15',
+                                lineCap: 'round',
+                                lineJoin: 'round'
+                            }).addTo(map);
 
-                        map.fitBounds(routeLine.getBounds(), { padding: [50, 50] });
-                    },
-                    function(error) { console.log("Akses Lokasi GPS tidak diizinkan."); },
-                    { enableHighAccuracy: true, timeout: 5000 }
-                );
+                            map.fitBounds(routeLine.getBounds(), { padding: [50, 50] });
+                        },
+                        function(error) { console.log("Akses Lokasi GPS tidak diizinkan."); },
+                        { enableHighAccuracy: true, timeout: 5000 }
+                    );
+                }
+            } catch (err) {
+                console.warn("Gagal inisialisasi peta Leaflet: ", err);
             }
         }
 
