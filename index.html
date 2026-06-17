@@ -462,7 +462,7 @@
                 <div class="p-8">
                     <div class="mb-4 bg-slate-100 p-3 rounded-xl text-xs text-slate-500 font-mono text-center border border-slate-200">
                         <b>Akses Internal:</b><br>
-                        Password Default: <b>sarjanasoft</b>
+                        Password Default: <b>admin123</b>
                     </div>
                     <form onsubmit="handleLogin(event)" class="space-y-4">
                         <div>
@@ -651,7 +651,7 @@
         // JEMBATAN WEB APP URL (GOOGLE APPS SCRIPT)
         // SILAKAN GANTI URL DI BAWAH DENGAN URL DEPLOY AKHIR WEB APP ANDA NANTI!
         // =========================================================================
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbzL7k6Jp-TbdWf-gG6A6m1y9dE0O3f9_q_R5cQ/exec"; 
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbxopUnmviHp0oJSqyAduxuSaPGbmqUmqVHHWw2dPYY9HWz1vHMEm9Bu5YxR-xZviupkVQ/exec"; 
 
         // State & Data
         let appData = [];
@@ -760,7 +760,7 @@
             if(viewId === 'dashboard') {
                 if(!currentUserRole) {
                     navigate('login');
-                    Swal.fire('Akses Ditolak', 'Silakan login dengan password "sarjanasoft" terlebih dahulu.', 'error');
+                    Swal.fire('Akses Ditolak', 'Silakan login dengan password "admin123" terlebih dahulu.', 'error');
                 } else {
                     renderTable();
                     renderDashboardCharts();
